@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Weather Forecast App</h1>
+    <div class="container">
+      <form>
+        <input
+          type="text"
+          placeholder="Enter city"
+          id="city-input"
+          autocomplete="off"
+          class="col-8"
+        />
+        <input type="submit" class="btn btn-primary col-2" value="Search" />
+      </form>
+
+      <div class="row part1">
+        <div class="col-6">
+          <h5 id="cityname">City Name</h5>
+          <ul>
+            <li id="date-time">Wed 11:50AM</li>
+            <li id="description">Sunny</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row part2">
+        <div class="col-4">
+          <img
+            id="icon"
+            src="http://openweathermap.org/img/wn/01d@2x.png"
+            alt="description"
+          />
+        </div>
+        <div class="col-4">
+          <strong id="temperature">35</strong>
+          <span class="units">
+            <span><a id="cel-link" class="active" href="#">°C</a></span> |
+            <span><a id="far-link" href="#">°F</a></span>
+          </span>
+        </div>
+
+        <div class="col-4 part2_3">
+          <h6 class="row" id="wind">Wind : 6km/h</h6>
+          <h6 class="row" id="humidity">Humidity: 80%</h6>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
+      </div>
+    </div>
+    <small
+      ><a target="_blank" href="https://github.com/Jwalana-R/weatherForecastApp"
+        >Open-source Code </a
+      >by Jwalana and deployed on Netlify</small
+    >
+    <script src="src/app.js"></script>
+  </body>
+</html>
